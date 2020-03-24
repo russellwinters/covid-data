@@ -1,0 +1,17 @@
+.country-graph {
+  width: $mobile-width;
+  margin: $center;
+  padding: 24px 0;
+}
+
+@include medium {
+  .country-graph {
+    width: $tablet-width;
+  }
+}
+
+@include large {
+  .country-graph {
+    width: $desktop-width;
+  }
+}

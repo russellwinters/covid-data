@@ -1,0 +1,63 @@
+.countries {
+  width: $mobile-width;
+  margin: $center;
+  margin-top: $margin-large;
+
+  &__search {
+    margin: $margin-small;
+
+    & > input {
+      width: 100%;
+      padding: 8px;
+      border: 2px solid $primary;
+      border-radius: 4px;
+
+      &::placeholder {
+        color: $tertiary;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &--link {
+      text-decoration: none;
+
+      & > button {
+        padding: 4px 12px;
+        margin: 8px 4px;
+        border: 2px solid $tertiary;
+        color: $primary;
+        border-radius: 24px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@include medium {
+  .countries {
+    width: $tablet-width;
+
+    &__search {
+      margin: $margin-medium;
+      display: flex;
+      justify-content: center;
+
+      & > input {
+        width: 40%;
+        padding: 12px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+@include large {
+  .countries {
+    width: $desktop-width;
+  }
+}

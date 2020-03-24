@@ -1,0 +1,14 @@
+@import "./partials/variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $secondary;
+  color: $primary;
+}
+
+@import "./partials/header";
+@import "./partials//virus-stats";
+@import "./partials/mapped-countries";
+@import "./partials/graphs";

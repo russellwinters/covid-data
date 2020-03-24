@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #1f2430;
+  color: #5ccfe6;
+}
+
+.header {
+  margin: 0 auto;
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__link {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    width: calc(100vw - 48px);
+    padding: 24px 0;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .header {
+    width: calc(100vw - 320px);
+    padding: 32px 0;
+  }
+}
+
+.virus-stats {
+  width: calc(100vw - 32px);
+  margin: 0 auto;
+}
+
+.virus-stats > h1 {
+  padding: 16px;
+  padding-left: 0px;
+}
+
+.virus-stats > div > section {
+  margin: 16px;
+  margin-left: 0px;
+}
+
+.virus-stats > div > section > h3 {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.virus-stats > div > section > p {
+  padding: 4px 0px;
+}
+
+.virus-stats > div > section > p > span {
+  color: #ffcc66;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+  .virus-stats {
+    width: calc(100vw - 48px);
+  }
+  .virus-stats > h1 {
+    font-size: 2.5em;
+  }
+  .virus-stats > div > section {
+    margin: 24px;
+    margin-left: 0px;
+  }
+  .virus-stats > div > section > h3,
+  .virus-stats > div > section > p {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .virus-stats {
+    width: calc(100vw - 320px);
+  }
+  .virus-stats > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.countries {
+  width: calc(100vw - 32px);
+  margin: 0 auto;
+  margin-top: 32px;
+}
+
+.countries__search {
+  margin: 16px;
+}
+
+.countries__search > input {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #5ccfe6;
+  border-radius: 4px;
+}
+
+.countries__search > input::-webkit-input-placeholder {
+  color: #ffcc66;
+}
+
+.countries__search > input:-ms-input-placeholder {
+  color: #ffcc66;
+}
+
+.countries__search > input::-ms-input-placeholder {
+  color: #ffcc66;
+}
+
+.countries__search > input::placeholder {
+  color: #ffcc66;
+}
+
+.countries__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.countries__buttons--link {
+  text-decoration: none;
+}
+
+.countries__buttons--link > button {
+  padding: 4px 12px;
+  margin: 8px 4px;
+  border: 2px solid #ffcc66;
+  color: #5ccfe6;
+  border-radius: 24px;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+  .countries {
+    width: calc(100vw - 48px);
+  }
+  .countries__search {
+    margin: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .countries__search > input {
+    width: 40%;
+    padding: 12px;
+    line-height: 24px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .countries {
+    width: calc(100vw - 320px);
+  }
+}
+
+.country-graph {
+  width: calc(100vw - 32px);
+  margin: 0 auto;
+  padding: 24px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .country-graph {
+    width: calc(100vw - 48px);
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .country-graph {
+    width: calc(100vw - 320px);
+  }
+}
+/*# sourceMappingURL=main.css.map */

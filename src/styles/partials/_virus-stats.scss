@@ -1,0 +1,62 @@
+.virus-stats {
+  width: $mobile-width;
+  margin: $center;
+
+  & > h1 {
+    padding: $margin-small;
+    padding-left: 0px;
+  }
+  & > div {
+    & > section {
+      margin: $margin-small;
+      margin-left: 0px;
+
+      & > h3 {
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+
+      & > p {
+        padding: 4px 0px;
+
+        & > span {
+          color: $tertiary;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+@include medium {
+  .virus-stats {
+    width: $tablet-width;
+
+    & > h1 {
+      font-size: 2.5em;
+    }
+
+    & > div {
+      & > section {
+        margin: $margin-medium;
+        margin-left: 0px;
+
+        & > h3,
+        & > p {
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+}
+
+@include large {
+  .virus-stats {
+    width: $desktop-width;
+
+    & > div {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

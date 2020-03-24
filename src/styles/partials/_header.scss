@@ -1,0 +1,24 @@
+.header {
+  margin: $center;
+  padding: $margin-small;
+  display: flex;
+  // justify-content: space-between;
+
+  &__link {
+    text-decoration: none;
+  }
+}
+
+@include medium {
+  .header {
+    width: $tablet-width;
+    padding: 24px 0;
+  }
+}
+
+@include large {
+  .header {
+    width: $desktop-width;
+    padding: 32px 0;
+  }
+}
