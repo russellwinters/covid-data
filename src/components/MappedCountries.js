@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 export default function MappedCountries({ data }) {
   const [fullCountryList, setFullCountryList] = useState([]);
@@ -45,16 +45,25 @@ export default function MappedCountries({ data }) {
     setUsedCountryList(currentList);
   };
 
+  const submitHandler = event => {
+    event.preventDefault();
+    if (usedCountryList.length === 1) {
+      console.log(usedCountryList[0].countryID);
+      window.location.assign(`/country/${usedCountryList[0].countryID}`);
+    }
+  };
+
   return (
     <section className="countries">
-      <div className="countries__search">
+      <form onSubmit={submitHandler} className="countries__search">
         <input
+          name="countrySearch"
           className="basicInput"
           type="text"
           onChange={SearchHandler}
           placeholder="Search for country"
         />
-      </div>
+      </form>
 
       <div className="countries__buttons">{mappedCodes}</div>
     </section>
