@@ -4,6 +4,7 @@ import { Link, Redirect } from "react-router-dom";
 export default function MappedCountries({ data }) {
   const [fullCountryList, setFullCountryList] = useState([]);
   const [usedCountryList, setUsedCountryList] = useState([]);
+  const [redirect, setRedirect] = useState(null);
 
   //Getting all country codes, filtering out unwanted data and storing in two different sets of state
   useEffect(() => {
@@ -48,10 +49,14 @@ export default function MappedCountries({ data }) {
   const submitHandler = event => {
     event.preventDefault();
     if (usedCountryList.length === 1) {
-      console.log(usedCountryList[0].countryID);
-      window.location = `/country/${usedCountryList[0].countryID}`;
+      // console.log(usedCountryList[0].countryID);
+      setRedirect(usedCountryList[0].countryID);
     }
   };
+
+  if (redirect) {
+    return <Redirect to={`/country/${redirect}`} />;
+  }
 
   return (
     <section className="countries">
