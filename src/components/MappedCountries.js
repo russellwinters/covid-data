@@ -49,7 +49,7 @@ export default function MappedCountries({ data }) {
     event.preventDefault();
     if (usedCountryList.length === 1) {
       console.log(usedCountryList[0].countryID);
-      window.location.assign(`/country/${usedCountryList[0].countryID}`);
+      window.location = `/country/${usedCountryList[0].countryID}`;
     }
   };
 

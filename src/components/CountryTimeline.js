@@ -12,7 +12,7 @@ export default function CountryTimeline(props) {
     if (countryCode !== props.match.params.id) {
       axios
         .get(
-          `https://cors-anywhere.herokuapp.com/https://thevirustracker.com/free-api?countryTimeline=${props.match.params.id}`
+          `https://api.thevirustracker.com/free-api?countryTimeline=${props.match.params.id}`
         )
         .then(res => {
           let countryTimeline = res.data;

@@ -8,7 +8,7 @@ export default function CountryStats({ match }) {
   useEffect(() => {
     axios
       .get(
-        `https://cors-anywhere.herokuapp.com/https://thevirustracker.com/free-api?countryTotal=${match.params.id}`
+        `https://api.thevirustracker.com/free-api?countryTotal=${match.params.id}`
       )
       .then(res => {
         setCountryData(res.data.countrydata[0]);

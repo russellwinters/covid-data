@@ -8,9 +8,7 @@ const GlobalStatsContextProvider = ({ children }) => {
 
   useEffect(() => {
     axios //Call to get canadian stats
-      .get(
-        "https://cors-anywhere.herokuapp.com/https://thevirustracker.com/free-api?global=stats"
-      )
+      .get("https://api.thevirustracker.com/free-api?global=stats")
       .then(res => {
         setGlobalStats(res.data.results[0]);
       });
