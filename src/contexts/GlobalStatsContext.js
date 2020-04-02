@@ -13,7 +13,6 @@ const GlobalStatsContextProvider = ({ children }) => {
       )
       .then(res => {
         setGlobalStats(res.data.results[0]);
-        console.log(res.data);
       });
 
     return () => {

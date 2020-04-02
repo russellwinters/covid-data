@@ -34,6 +34,7 @@ export default function MappedCountries({ data }) {
   //Listener for Search input
   const SearchHandler = event => {
     event.preventDefault();
+
     let query = document.querySelector(".basicInput").value.toLowerCase();
     let currentList = fullCountryList.filter(obj => {
       return (
@@ -46,7 +47,7 @@ export default function MappedCountries({ data }) {
 
   return (
     <section className="countries">
-      <div onClick={SearchHandler} className="countries__search">
+      <div className="countries__search">
         <input
           className="basicInput"
           type="text"

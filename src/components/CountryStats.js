@@ -17,8 +17,6 @@ export default function CountryStats({ match }) {
       setCountryData(null);
     };
   }, []);
-  console.log(match.params.id);
-  console.log(countryData);
 
   return (
     <div>

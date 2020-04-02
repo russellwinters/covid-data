@@ -10,7 +10,7 @@ const CountryCodeContextProvider = ({ children }) => {
     axios //?Call to get total timeline, where I can fetch country codes
       .get("https://api.thevirustracker.com/free-api?countryTotals=ALL")
       .then(res => {
-        console.log(Object.values(res.data.countryitems[0]));
+        // console.log(Object.values(res.data.countryitems[0]));
         const COUNTRY_INFO = Object.values(res.data.countryitems[0]).map(
           obj => {
             let countryInfo = {
@@ -20,8 +20,10 @@ const CountryCodeContextProvider = ({ children }) => {
             return countryInfo;
           }
         );
-        console.log("Country Code Fetch:", COUNTRY_INFO);
-        setCountries(COUNTRY_INFO);
+        let newCountryInfo = COUNTRY_INFO; //Setting countryInfo in variable to parse data
+        let countryListLength = COUNTRY_INFO.length; //Setting the length to a variable so that I can Set length of new info minus the last list item (undefined)
+        newCountryInfo.length = countryListLength - 1; //Only going through this process so I can come back to log if API I'm using changes
+        setCountries(newCountryInfo);
       });
 
     return () => {
