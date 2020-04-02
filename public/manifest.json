@@ -1,6 +1,6 @@
 {
   "short_name": "Covid Data",
-  "name": "A simple app to track the spread of COVID-19 in countries throughout the world",
+  "name": "COVID-19 Data-Tracking",
   "icons": [
     {
       "src": "favicon.ico",
