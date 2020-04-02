@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-// import axios from "axios";
 import VirusResults from "./VirusResults";
-// import CountryTimeline from "./CountryTimeline";
 import { CountryCodeContext } from "../contexts/CountryCodeContext";
 import MappedCountries from "./MappedCountries";
 import { GlobalStatsContext } from "../contexts/GlobalStatsContext";

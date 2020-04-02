@@ -8,18 +8,19 @@ const CountryCodeContextProvider = ({ children }) => {
 
   useEffect(() => {
     axios //?Call to get total timeline, where I can fetch country codes
-      .get(
-        "https://cors-anywhere.herokuapp.com/https://thevirustracker.com/timeline/map-data.json"
-      )
+      .get("https://api.thevirustracker.com/free-api?countryTotals=ALL")
       .then(res => {
-        const COUNTRY_INFO = res.data[54].data.map(obj => {
-          let countryInfo = {
-            countryID: obj.countrycode,
-            countryName: obj.countrylabel
-          };
-          return countryInfo;
-        });
-        console.log("Country Code Fetch:", res.data);
+        console.log(Object.values(res.data.countryitems[0]));
+        const COUNTRY_INFO = Object.values(res.data.countryitems[0]).map(
+          obj => {
+            let countryInfo = {
+              countryID: obj.code,
+              countryName: obj.title
+            };
+            return countryInfo;
+          }
+        );
+        console.log("Country Code Fetch:", COUNTRY_INFO);
         setCountries(COUNTRY_INFO);
       });
 
