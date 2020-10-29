@@ -1,4 +1,8 @@
 [[redirects]]
+from="/*"
+to="/index.html"
+status=200
+
 from="/game"
 to="https://stupefied-newton-e59bdd.netlify.app/"
 status=308
