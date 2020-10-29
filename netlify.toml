@@ -1,0 +1,5 @@
+[[redirects]]
+from="/game"
+to="https://stupefied-newton-e59bdd.netlify.app/"
+status=200
+force=true
